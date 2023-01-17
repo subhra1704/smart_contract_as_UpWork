@@ -1,0 +1,705 @@
+{
+    "development": {
+        "config_id": "development",
+        "node_port": 1831,
+        "json_indentation": 4,
+        "host": "localhost",
+        "database": "smart_contract-as-Upwork-dev",
+        "swaggerURL": "localhost:1831",
+        "nodemailer": {
+            "user": "fortestingpurpose0077@gmail.com",
+            "pass": "Mobiloitte@1"
+        },
+        "cloudinary": {
+            "cloud_name": "mobiloitte-testing1",
+            "api_key": "312558533198362",
+            "api_secret": "7syPAYHWJAUM1Z46rIULFaUlYu4"
+        },
+        "sendGridKey":"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",
+
+        "Infura_URL": "https://kovan.infura.io/v3/c3febec11cbc46458f3c991fa91985d1",
+        "contractAddress": "0x7a1103c278547a44d73dee74a4d59b583ec2c8cd",
+        "ABI": [
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "previousOwner",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "OwnershipTransferred",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "name": "_approveContract",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "contractName",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "userId",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "privacy",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "agencyTeam",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "description",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "startDate",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "stopDate",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "amount",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "contractDocument",
+                                "type": "string"
+                            }
+                        ],
+                        "internalType": "struct AgreementContract.Contract",
+                        "name": "_contract",
+                        "type": "tuple"
+                    }
+                ],
+                "name": "addContract",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "contractId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "milestoneId",
+                        "type": "string"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "milestone",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "dueDate",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "priority",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "_amount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct AgreementContract.Milestone[]",
+                        "name": "_milestone",
+                        "type": "tuple[]"
+                    }
+                ],
+                "name": "addMilestone",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "contractId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "employeeId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "status",
+                        "type": "bool"
+                    }
+                ],
+                "name": "approveContract",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "contractIds",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_value",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "contractInfo",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "contractName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "userId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "privacy",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "agencyTeam",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "startDate",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "stopDate",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractDocument",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "milestonesInfo",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "milestone",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "dueDate",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "priority",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_amount",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "owner",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "renounceOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "transferOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }
+        ]
+    },
+    "staging": {
+        "config_id": "staging",
+        "node_port": 1831,
+        "host": "localhost",
+        "database": "smart_contract-as-Upwork-stag",
+        "swaggerURL": "node-service-platform.mobiloitte.com",
+        "nodemailer": {
+            "user": "fortestingpurpose0077@gmail.com",
+            "pass": "Mobiloitte@1"
+        },
+        "cloudinary": {
+            "cloud_name": "mobiloitte-testing1",
+            "api_key": "312558533198362",
+            "api_secret": "7syPAYHWJAUM1Z46rIULFaUlYu4"
+        },
+        "sendGridKey":"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",
+
+        "Infura_URL": "https://kovan.infura.io/v3/c3febec11cbc46458f3c991fa91985d1",
+        "contractAddress": "0x7a1103c278547a44d73dee74a4d59b583ec2c8cd",
+        "ABI": [
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "previousOwner",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "OwnershipTransferred",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "name": "_approveContract",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "contractName",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "userId",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "privacy",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "agencyTeam",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "description",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "startDate",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "stopDate",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "amount",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "contractDocument",
+                                "type": "string"
+                            }
+                        ],
+                        "internalType": "struct AgreementContract.Contract",
+                        "name": "_contract",
+                        "type": "tuple"
+                    }
+                ],
+                "name": "addContract",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "contractId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "milestoneId",
+                        "type": "string"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "milestone",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "dueDate",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "priority",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "_amount",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct AgreementContract.Milestone[]",
+                        "name": "_milestone",
+                        "type": "tuple[]"
+                    }
+                ],
+                "name": "addMilestone",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "contractId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "employeeId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "status",
+                        "type": "bool"
+                    }
+                ],
+                "name": "approveContract",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "contractIds",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_value",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "contractInfo",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "contractName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "userId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "privacy",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "agencyTeam",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "startDate",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "stopDate",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractDocument",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "milestonesInfo",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "milestone",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "dueDate",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "priority",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_amount",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "owner",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "renounceOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "transferOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }
+        ]
+    },
+    "production": {
+        "config_id": "production",
+        "node_port": 1826,
+        "database": "smart_contract-as-service-Plateform-stag",
+        "host": "localhost"
+    }
+}
